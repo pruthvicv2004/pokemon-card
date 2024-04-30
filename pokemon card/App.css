@@ -1,0 +1,506 @@
+/* Pokemon.css */
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('https://editors.dexerto.com/wp-content/uploads/2022/03/25/How-many-Pokemon-cards-are-there.jpg') repeat; /* Replace 'pokemon_background.jpg' with the actual path to your background image */
+    background-size: contain;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .app-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background for better readability */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  .pokemon-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .card-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+  }
+  
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0 10px;
+    padding: 15px;
+    width: 300px;
+    text-align: center;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Table Styles (inside cards) */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+  }
+  
+  th,
+  td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  /* PokemonThumbnail Styles */
+  .thumb-container {
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 15px;
+    text-align: center;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .thumb-container:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .number {
+    font-size: 12px;
+    color: #888;
+  }
+  
+  img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: contain;
+    margin-top: 10px;
+  }
+  
+  .detail-wrapper {
+    text-align: left;
+  }
+  
+  h3 {
+    margin-bottom: 5px;
+  }
+  
+  .small {
+    font-size: 12px;
+    color: #888;
+  }
+  
+  .pokeinfo {
+    cursor: pointer;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Description Styles */
+  .desc {
+    text-align: left;
+    margin-top: 15px;
+  }
+  
+  .desc p {
+    margin-bottom: 5px;
+  }
+  
+  .desc b {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Pokemon Styles */
+  .pokemon-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 15px;
+    text-align: center;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .pokemon-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .pokemon-image {
+    width: 100%;
+    max-height: 150px;
+    object-fit: contain; /* Change object-fit property */
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .pokemon-details {
+    text-align: left;
+  }
+  
+  h1#pokemon-kingdom {
+    font-family: 'Pokemon Solid', 'Arial', sans-serif; /* Use a Pokemon font if available, fallback to Arial */
+    font-size: 36px; /* Adjust the font size */
+    text-transform: uppercase; /* Uppercase text */
+    color: #e50000; /* Pokemon Red color */
+    background-color: #fff; /* White background color */
+    padding: 10px 20px; /* Add padding for better visual appearance */
+    text-align: center; /* Center the text */
+    letter-spacing: 2px; /* Adjust letter spacing for better readability */
+    margin-bottom: 20px; /* Add some bottom margin */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle text shadow */
+  }
+  
+  /* Type-specific Colors */
+  .grass,
+  .grass-search,
+  .grass-sort,
+  .grass-filter {
+    background-color: #8FDB85;
+    border-color: #8FDB85;
+    color: #fff;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .grass:hover,
+  .grass-search:hover,
+  .grass-sort:hover,
+  .grass-filter:hover {
+    background-color: #64a070;
+    border-color: #64a070;
+  }
+  
+  .fire,
+  .fire-search,
+  .fire-sort,
+  .fire-filter {
+    background-color: #FFAB91;
+    border-color: #FFAB91;
+    color: #fff;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .fire:hover,
+  .fire-search:hover,
+  .fire-sort:hover,
+  .fire-filter:hover {
+    background-color: #ea3e0e;
+    border-color: #e25a34;
+  }
+  
+  .water,
+  .water-search,
+  .water-sort,
+  .water-filter {
+    background-color: #82B1FF;
+    border-color: #82B1FF;
+    color: #fff;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .water:hover,
+  .water-search:hover,
+  .water-sort:hover,
+  .water-filter:hover {
+    background-color: #688fd6;
+    border-color: #688fd6;
+  }
+  
+  .electric,
+  .electric-search,
+  .electric-sort,
+  .electric-filter {
+    background-color: #FFD700;
+    border-color: #FFD700;
+    color: #fff;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .electric:hover,
+  .electric-search:hover,
+  .electric-sort:hover,
+  .electric-filter:hover {
+    background-color: #c9a340;
+    border-color: #c9a340;
+  }
+  
+  .psychic,
+  .psychic-search,
+  .psychic-sort,
+  .psychic-filter {
+    background-color: #FF69B4;
+    border-color: #FF69B4;
+    color: #fff;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .psychic:hover,
+  .psychic-search:hover,
+  .psychic-sort:hover,
+  .psychic-filter:hover {
+    background-color: #d74687;
+    border-color: #d74687;
+  }
+  
+  .normal,
+  .normal-search,
+  .normal-sort,
+  .normal-filter {
+    background-color: #A9A9A9;
+    border-color: #A9A9A9;
+    color: #fff;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .normal:hover,
+  .normal-search:hover,
+  .normal-sort:hover,
+  .normal-filter:hover {
+    background-color: #7a7a7a;
+    border-color: #7a7a7a;
+  }
+  
+  .dark,
+  .dark-search,
+  .dark-sort,
+  .dark-filter {
+    background-color: #4A4A4A;
+    border-color: #4A4A4A;
+    color: #fff;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .dark:hover,
+  .dark-search:hover,
+  .dark-sort:hover,
+  .dark-filter:hover {
+    background-color: #2e2e2e;
+    border-color: #2e2e2e;
+  }
+  
+  .fairy,
+  .fairy-search,
+  .fairy-sort,
+  .fairy-filter {
+    background-color: #FFC0CB;
+    border-color: #FFC0CB;
+    color: #fff;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .fairy:hover,
+  .fairy-search:hover,
+  .fairy-sort:hover,
+  .fairy-filter:hover {
+    background-color: #ff9eb9;
+    border-color: #ff9eb9;
+  }
+  
+  .legendary,
+  .legendary-search,
+  .legendary-sort,
+  .legendary-filter {
+    background-color: #FFD700;
+    border-color: #FFD700;
+    color: #fff;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .legendary:hover,
+  .legendary-search:hover,
+  .legendary-sort:hover,
+  .legendary-filter:hover {
+    background-color: #c9a340;
+    border-color: #c9a340;
+  }
+  
+  .mythical,
+  .mythical-search,
+  .mythical-sort,
+  .mythical-filter {
+    background-color: #9400D3;
+    border-color: #9400D3;
+    color: #fff;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .mythical:hover,
+  .mythical-search:hover,
+  .mythical-sort:hover,
+  .mythical-filter:hover {
+    background-color: #76008b;
+    border-color: #76008b;
+  }
+  
+  .fighting,
+  .fighting-search,
+  .fighting-sort,
+  .fighting-filter {
+      background-color: #A52A2A;
+      border-color: #A52A2A;
+      color: #fff;
+      transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .fighting:hover,
+  .fighting-search:hover,
+  .fighting-sort:hover,
+  .fighting-filter:hover {
+      background-color: #762727;
+      border-color: #762727;
+  }
+  
+  .ghost,
+  .ghost-search,
+  .ghost-sort,
+  .ghost-filter {
+      background-color: #4B0082;
+      border-color: #4B0082;
+      color: #fff;
+      transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .ghost:hover,
+  .ghost-search:hover,
+  .ghost-sort:hover,
+  .ghost-filter:hover {
+      background-color: #320055;
+      border-color: #320055;
+  }
+  
+  .steel,
+  .steel-search,
+  .steel-sort,
+  .steel-filter {
+      background-color: #B0C4DE;
+      border-color: #B0C4DE;
+      color: #333;
+      transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .steel:hover,
+  .steel-search:hover,
+  .steel-sort:hover,
+  .steel-filter:hover {
+      background-color: #849bb6;
+      border-color: #849bb6;
+  }
+  
+  .rock,
+  .rock-search,
+  .rock-sort,
+  .rock-filter {
+      background-color: #A9A878;
+      border-color: #A9A878;
+      color: #fff;
+      transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .rock:hover,
+  .rock-search:hover,
+  .rock-sort:hover,
+  .rock-filter:hover {
+      background-color: #7a7a53;
+      border-color: #7a7a53;
+  }
+  
+  .ground,
+  .ground-search,
+  .ground-sort,
+  .ground-filter {
+      background-color: #D2B48C;
+      border-color: #D2B48C;
+      color: #fff;
+      transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .ground:hover,
+  .ground-search:hover,
+  .ground-sort:hover,
+  .ground-filter:hover {
+      background-color: #ad9169;
+      border-color: #ad9169;
+  }
+  
+  .poison,
+  .poison-search,
+  .poison-sort,
+  .poison-filter {
+      background-color: #800080;
+      border-color: #800080;
+      color: #fff;
+      transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .poison:hover,
+  .poison-search:hover,
+  .poison-sort:hover,
+  .poison-filter:hover {
+      background-color: #550055;
+      border-color: #550055;
+  }
+  
+  .ice,
+  .ice-search,
+  .ice-sort,
+  .ice-filter {
+      background-color: #87CEEB;
+      border-color: #87CEEB;
+      color: #333;
+      transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .ice:hover,
+  .ice-search:hover,
+  .ice-sort:hover,
+  .ice-filter:hover {
+      background-color: #5e97b0;
+      border-color: #5e97b0;
+  }
+  
+  .bug,
+  .bug-search,
+  .bug-sort,
+  .bug-filter {
+      background-color: #1c4d05;
+      border-color: #2b650c;
+      color: #fff;
+      transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .bug:hover,
+  .bug-search:hover,
+  .bug-sort:hover,
+  .bug-filter:hover {
+      background-color: #2b650c;
+      border-color: #1c4d05;
+  }
